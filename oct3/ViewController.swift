@@ -12,10 +12,17 @@ class ViewController: UIViewController {
     @IBOutlet weak var label1: UILabel!
     @IBOutlet weak var label2: UILabel!
     
+    let user : UnivercitySlave = Rector()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
+        user.name = "John Doe"
+        
+        label1.text = user.name
+        
+        /*
         let student = Student()
         student.name = "John Doe"
         student.direction = "Programming"
@@ -25,7 +32,7 @@ class ViewController: UIViewController {
         
         label1.text = student.name
         label2.text = student.adress
-        
+        */
                 
     }
     class UnivercitySlave {
@@ -39,6 +46,15 @@ class ViewController: UIViewController {
     
     class Rector : UnivercitySlave {
         var univercityIncome: Int = 0
+        
+        override var name: String {
+            get {
+                return "Ser, \(super.name)"
+            } set(value) {
+                super.name = value
+                
+            }
+        }
     }
     
     class Junitor : UnivercitySlave {
