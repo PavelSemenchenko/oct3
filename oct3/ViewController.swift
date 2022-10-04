@@ -28,9 +28,24 @@ class ViewController: UIViewController {
         
                 
     }
-    
-    class Student {
+    class UnivercitySlave {
         var name: String = ""
+    }
+    
+    
+    class Lector : UnivercitySlave {
+        var direction: String = ""
+    }
+    
+    class Rector : UnivercitySlave {
+        var univercityIncome: Int = 0
+    }
+    
+    class Junitor : UnivercitySlave {
+        var mop: String = ""
+    }
+    
+    class Student : UnivercitySlave {
         var direction: String = ""
         var city: String = ""
         var street: String = ""
